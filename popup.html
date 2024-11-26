@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Video Speed Control</title>
+  <style>
+    body {
+      width: 300px;
+      padding: 10px;
+      font-family: Arial, sans-serif;
+    }
+    .speed-controls, .shortcut-controls {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+    .shortcut-info {
+      font-size: 0.8em;
+      color: #666;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .shortcut-input {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    .shortcut-input label {
+      margin-right: 10px;
+      width: 120px;
+    }
+    button {
+      padding: 5px 10px;
+    }
+    input {
+      width: 100px;
+      text-align: center;
+    }
+    .shortcut-input input {
+      width: 150px;
+    }
+    #saveShortcuts {
+      width: 100%;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="shortcut-info" id="currentShortcuts">
+    Increase Speed: Ctrl+Shift+Up
+    <br>
+    Decrease Speed: Ctrl+Shift+Down
+    <br>
+    Reset Speed: Ctrl+Shift+R
+  </div>
+
+  <div class="speed-controls">
+    <button id="decreaseSpeed">-</button>
+    <input type="text" id="speedDisplay" value="1.0x" readonly>
+    <button id="increaseSpeed">+</button>
+  </div>
+  <button id="resetSpeed">Reset Speed</button>
+
+  
+  <script src="popup.js"></script>
+</body>
+</html>
